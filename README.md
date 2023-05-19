@@ -1,6 +1,6 @@
-# ShieldPass
+# BlockShell
 
-ShieldPass is a password manager based on blockchain technology. It is a decentralized, open-source, and free. Dont' hesitate to visit our website : [![ShieldPass](https://github.io/shieldpass/frontend/)
+BlockShell is a password manager based on blockchain technology. It is a decentralized, open-source, and free. Dont' hesitate to visit our website : [![BlockShell](https://github.io/BlockShell/frontend/)
 
 ## Project Structure
 
