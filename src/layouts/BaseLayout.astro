@@ -2,7 +2,6 @@
 import Header from '../components/Header/Header.astro';
 import Footer from '../components/Footer.astro';
 const {mainClass, betweenMainAndFooterClass} = Astro.props;
-const navaClass = "xl:hidden no-underline text-2xl text-white font-bold m-8 p-2 h-16 flex items-center place-content-center bg-violet-900 rounded-lg border-solid border-2 border-violet-400";
 ---
 
 <!DOCTYPE html>
@@ -16,24 +15,11 @@ const navaClass = "xl:hidden no-underline text-2xl text-white font-bold m-8 p-2 
 		<meta content="width=device-width,initial-scale=1" name="viewport">
 	</head>
 	<body class="flex flex-col bg-gradient-to-b from-[#300270] to-30% to-[#0E0021] left-0 text-white m-0 min-h-screen font-sans w-full">
-
-        <nav id="mySidepanel" class="w-[100%] flex-col bg-transparent top-0 bottom-0 hidden fixed z-[101] border-2 border-r border-l-0 border-b-0 border-t-0 border-solid border-slate-500 backdrop-blur-md">
-			<a class={"2xl:hidden no-underline text-xl text-white font-bold m-4 p-2 h-16 flex items-center place-content-center bg-pink-600 rounded-lg"} href="javascript:void(0)" onclick="closeNav()">Close menu</a>	
-            <a class={navaClass} href={`${import.meta.env.BASE_URL}`}>Home</a>
-			<a class={navaClass} href={`${import.meta.env.BASE_URL}pricing`}>Pricing</a>
-			<a class={navaClass} href={`${import.meta.env.BASE_URL}team`}>Team</a>
-			<a class={navaClass} href={`${import.meta.env.BASE_URL}roadmap`}>Roadmap</a>
-			<a class={navaClass} href={`${import.meta.env.BASE_URL}extension`}>Add web extension</a>
-        </nav>
-
 		<Header headerclass="place-content-center backdrop-blur-md flex flex-row w-full bg-opacity-5 bg-[#300270] border-b border-solid border-zinc-600 border-t-0 border-r-0 border-l-0 top-0 sticky drop-shadow-[0_0_200px_rgba(255,0,255,0.3)] z-[100]"/>
-
 		<main class={mainClass}>
             <slot/>
 		</main>
-
 		<div class={betweenMainAndFooterClass}></div>
-
         <Footer footerclass="flex flex-row w-full bg-[#2F026E] place-content-center border-b border-solid border-zinc-600 border-t-0 border-r-0 border-l-0"/>
 	</body>
 </html>
